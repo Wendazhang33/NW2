@@ -1,0 +1,30 @@
+ &MOM_input_nml
+         output_directory = './',
+         input_filename = 'F'
+         restart_input_dir = 'RESTART/',
+         restart_output_dir = 'RESTART/',
+         parameter_filename = 'MOM_input',
+                              'MOM_layout',
+                              'MOM_override' /
+
+ &fms_affinity_nml
+ affinity = .false.
+ /
+ &diag_manager_nml
+        prepend_date=F,
+ /
+
+ &fms_nml
+        clock_grain='ROUTINE'
+        clock_flags='SYNC'
+        domains_stack_size = 12255296
+        stack_size =0 /
+
+ &ocean_solo_nml
+            months  = 0
+            days    = 2400
+            hours   = 0
+            minutes = 0
+            seconds = 0
+            calendar = 'thirty_day'
+ /
